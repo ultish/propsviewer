@@ -4,8 +4,10 @@ import org.eclipse.jetty.websocket.api.Session;
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketClose;
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketConnect;
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketMessage;
+import org.eclipse.jetty.websocket.api.annotations.WebSocket;
 
-public class WebSocketHandler {
+@WebSocket
+public class ProsViewerWebSocketHandler {
    @OnWebSocketConnect
    public void onConnect(Session user) throws Exception {
       String username = "User" + PropsViewer.nextUserNumber++;
